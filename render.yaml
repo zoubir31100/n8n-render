@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: n8n-on-render
+    env: docker
+    plan: free
+    branch: main
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: N8N_HOST
+        value: your-n8n.onrender.com
+      - key: N8N_PORT
+        value: 5678
+      - key: WEBHOOK_URL
+        value: https://your-n8n.onrender.com/
+      - key: GENERIC_TIMEZONE
+        value: Africa/Algiers
